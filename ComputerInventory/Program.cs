@@ -11,7 +11,7 @@ namespace ComputerInventory
         static void Main(string[] args)
         {
             // Set a color you like other than green or red as this will be used later
-            //Console.ForegroundColor = ConsoleColor.Black;
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
             int result = -1;
             while (result != 9)
             {

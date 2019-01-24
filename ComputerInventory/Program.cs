@@ -523,12 +523,7 @@ namespace ComputerInventory
         {
             using (var context = new MachineContext())
             {
-                var os = new OperatingSys
-                {
-                    Name = "Windows XP",
-                    StillSupported =
-                false
-                };
+                var os = new OperatingSys { Name = "Windows XP", StillSupported = false };
                 context.OperatingSys.Add(os);
                 os = new OperatingSys { Name = "Windows 7", StillSupported = true };
                 context.OperatingSys.Add(os);
@@ -596,8 +591,11 @@ namespace ComputerInventory
                     Name = "Ubuntu Server 17.04",
                     StillSupported = true
                 };
+                Console.WriteLine("Seeding the database...");
                 context.OperatingSys.Add(os);
-                context.SaveChanges();
+                int count = context.SaveChanges();
+                Console.WriteLine($"Added {count} records\r\nHit any key to continue...");
+                Console.ReadKey();
             }
         }
 

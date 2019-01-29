@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ComputerInventory.Migrations
 {
     [DbContext(typeof(MachineContext))]
-    [Migration("20190122095643_ComputerInventory.Data.MachineContext")]
-    partial class ComputerInventoryDataMachineContext
+    [Migration("20190123132608_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

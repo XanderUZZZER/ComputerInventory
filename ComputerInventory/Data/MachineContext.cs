@@ -15,13 +15,13 @@ namespace ComputerInventory.Data
         public virtual DbSet<SupportLog> SupportLog { get; set; }
         public virtual DbSet<SupportTicket> SupportTicket { get; set; }
         public virtual DbSet<WarrantyProvider> WarrantyProvider { get; set; }
-        private readonly string dbFilePath = "~/App_Data/BlogV2.mdf";
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
-            {
-                optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb; Database=BegEFCore2; Trusted_Connection=true;User ID=;Password=;");
+            {/* AttachDbFilename=BegEFCore2.mdf;*/
+             //optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=BegEFCore2; Trusted_Connection=false;User ID=;Password= ;");
+                optionsBuilder.UseSqlServer(@"workstation id=Testdbfile.mssql.somee.com;packet size=4096;user id=XanderUZZZER_SQLLogin_1;pwd=SashkaSuper151086;data source=Testdbfile.mssql.somee.com;persist security info=False;initial catalog=Testdbfile");
             }
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)

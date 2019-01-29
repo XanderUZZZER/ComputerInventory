@@ -21,7 +21,7 @@ namespace ComputerInventory.Data
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb; Database=BegEFCore2; Trusted_Connection=false;User ID=;Password= ;");
+                optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb; Database=BegEFCore2; Trusted_Connection=true;User ID=;Password=;");
             }
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
